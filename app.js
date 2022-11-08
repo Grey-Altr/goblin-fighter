@@ -21,7 +21,7 @@ befriendedNumEl.textContent = befriendedRobitCount;
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     const data = new FormData(form);
-    const robitName = data.get('goblin-name');
+    const robitName = data.get('robit-name');
     const newRobit = {
         id: currentId,
         name: robitName,
