@@ -4,6 +4,7 @@
 const playerFPEl = document.querySelector('#player-fp');
 const befriendedNumEl = document.querySelector('#befriend-num');
 const form = document.querySelector('form');
+const 
 /* State */
 let playerFP = 10;
 let befriendedRobitCount = 0;
