@@ -1,5 +1,5 @@
 /* Imports */
-
+import { renderRobit } from "./render-utils.js";
 /* Get DOM Elements */
 const playerFPEl = document.querySelector('#player-fp');
 const befriendedNumEl = document.querySelector('#befriend-num');
