@@ -60,6 +60,12 @@ function robitClickHandler(robitData) {
 
     playerFPEl.textContent = playerFP;
     befriendedNumEl.textContent = befriendedRobitCount;
+
+    const fpEl = document.getElementById(`robit-hp-${robitData.id}`);
+    fpEl.textContent = robitData.fp < 0 ? 0 : robitData.fp;
+
+    const faceEl = document.getElementById(`robit-face-${robitData.id}`);
+    faceEl.textContent = robitData.fp > 0 ? '🤖' : '💗🤖💗';
 }
 /* Display Functions */
 
