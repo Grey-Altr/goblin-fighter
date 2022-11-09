@@ -4,6 +4,7 @@ import { renderRobit } from './render-utils.js';
 const playerFPEl = document.querySelector('#player-fp');
 const befriendedNumEl = document.querySelector('#befriend-num');
 const form = document.querySelector('form');
+const robitListEl = document.querySelector('.robits');
 /* State */
 let playerFP = 10;
 let befriendedRobitCount = 0;
@@ -68,5 +69,15 @@ function robitClickHandler(robitData) {
     faceEl.textContent = robitData.fp > 0 ? '🤖' : '💗🤖💗';
 }
 /* Display Functions */
+function displayRobits() {
+    robitListEl.textContent = '';
 
+    for (let robit of robits) {
+        const robitEl = renderRobit(robit);
+        robitEl.addEventListener('click', () => {
+            robitClickHandler(robit);
+        });
+        robitListEl.append(robitEl);
+    }
+}
 // (don't forget to call any display functions you want to run on page load!)
