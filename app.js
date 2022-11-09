@@ -29,6 +29,8 @@ form.addEventListener('submit', (e) => {
 
     currentId++;
     robits.push(newRobit);
+
+    displayRobits();
 });
 
 // robit clickHandler
@@ -81,3 +83,4 @@ function displayRobits() {
     }
 }
 // (don't forget to call any display functions you want to run on page load!)
+displayRobits();
