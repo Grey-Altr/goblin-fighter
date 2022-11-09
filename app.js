@@ -14,8 +14,6 @@ let robits = [
     { id: 3, name: '573v3', fp: 7 },
 ];
 /* Events */
-playerFPEl.textContent = playerFP;
-befriendedNumEl.textContent = befriendedRobitCount;
 
 // Invite Robit
 form.addEventListener('submit', (e) => {
@@ -59,6 +57,9 @@ function robitClickHandler(robitData) {
             "Wow... Robits just don't seen to find you that interesting. Maybe just stick to organics from now on?"
         );
     }
+
+    playerFPEl.textContent = playerFP;
+    befriendedNumEl.textContent = befriendedRobitCount;
 }
 /* Display Functions */
 
