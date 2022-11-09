@@ -10,7 +10,7 @@ let playerFP = 10;
 let befriendedRobitCount = 0;
 let currentId = 3;
 let robits = [
-    { id: 1, name: '451-1', fp: 3 },
+    { id: 1, name: '451-170n', fp: 3 },
     { id: 2, name: '83nn1', fp: 4 },
     { id: 3, name: '573v3', fp: 7 },
 ];
@@ -38,20 +38,20 @@ function robitClickHandler(robitData) {
     if (robitData.fp <= 0) return;
     if (Math.random() < 0.33) {
         robitData.fp--;
-        alert("You're really impressing " + robitData.name);
+        alert("You're really impressing " + robitData.name + '!');
     } else {
         alert('Keep chatting. ' + robitData.name + " isn't so sure about you...");
     }
 
     if (Math.random() < 0.5) {
         playerFP--;
-        alert('Umm, just an FYI... ' + robitData.name + " isn't feeling this convo...");
+        alert('Actually... ' + robitData.name + " isn't feeling this convo...");
     } else {
         alert(robitData.name + ' is unamused, but still listening...');
     }
 
     if (robitData.fp === 0) {
-        alert('You and ' + robitData.name + "really hit it off!! You're positively magnetic!");
+        alert('You and ' + robitData.name + " really hit it off!! You're positively magnetic!");
         befriendedRobitCount++;
     }
 
@@ -64,9 +64,8 @@ function robitClickHandler(robitData) {
     playerFPEl.textContent = playerFP;
     befriendedNumEl.textContent = befriendedRobitCount;
 
-    const fpEl = document.getElementById(`robit-hp-${robitData.id}`);
+    const fpEl = document.getElementById(`robit-fp-${robitData.id}`);
     fpEl.textContent = robitData.fp < 0 ? 0 : robitData.fp;
-
     const faceEl = document.getElementById(`robit-face-${robitData.id}`);
     faceEl.textContent = robitData.fp > 0 ? '🤖' : '💗🤖💗';
 }

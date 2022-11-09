@@ -5,6 +5,7 @@ export function renderRobit(robitData) {
     const fpEl = document.createElement('p');
 
     robitEl.classList.add('robit');
+    faceEl.classList.add('robitFace');
 
     nameEl.textContent = robitData.name;
     fpEl.id = `robit-fp-${robitData.id}`;
