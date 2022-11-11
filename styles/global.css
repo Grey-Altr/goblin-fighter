@@ -20,6 +20,7 @@ header {
 
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
 
     background-color: var(--header-background);
@@ -32,4 +33,62 @@ header .logo {
 
 main {
     padding: 20px;
+}
+
+.character-stats {
+    display: flex;
+    justify-content: space-between;
+}
+
+.player-stats {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.robit-stats {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+form {
+    width: 50%;
+    display: flex;
+    align-items: flex-end;
+    align-content: flex-end;
+    flex-direction: column;
+}
+
+input {
+    margin: 5px 0 5px 0;
+}
+
+.robits {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+    width: 100%;
+}
+
+.robit {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.robitFace {
+    font-size: 75px;
+}
+
+#game-over {
+    font-size: 150px;
+}
+
+#lockout {
+    font-size: 50px;
 }
