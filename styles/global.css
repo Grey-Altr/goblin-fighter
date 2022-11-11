@@ -84,3 +84,11 @@ input {
 .robitFace {
     font-size: 75px;
 }
+
+#game-over {
+    font-size: 150px;
+}
+
+#lockout {
+    font-size: 50px;
+}

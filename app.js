@@ -40,7 +40,11 @@ function robitClickHandler(robitData) {
         robitData.fp--;
         alert("You're really impressing " + robitData.name + '!');
     } else {
-        alert('Keep chatting. ' + robitData.name + " isn't so sure about you...");
+        alert(
+            'Keep chatting. ' +
+                robitData.name +
+                " isn't so sure about you, but you might still have a chance of winning them over..."
+        );
     }
 
     if (Math.random() < 0.5) {
@@ -59,6 +63,8 @@ function robitClickHandler(robitData) {
         alert(
             "Wow... Robits just don't seen to find you that interesting. Maybe just stick to organics from now on?"
         );
+        robitListEl.innerHTML = `<p id='game-over'>😭</p>`;
+        form.innerHTML = `<p id='lockout'>🚫</p>`;
     }
 
     playerFPEl.textContent = playerFP;
